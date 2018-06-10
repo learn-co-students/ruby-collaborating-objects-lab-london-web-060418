@@ -32,7 +32,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    existing_artist = self.all.detect {|item| item.name = name}
+    existing_artist = self.class.all.detect {|item| item.name = name}
     if existing_artist
       existing_artist
     else
